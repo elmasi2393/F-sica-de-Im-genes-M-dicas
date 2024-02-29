@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kn}{import} \PYG{n+nn}{cv2}
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{import} \PYG{n+nn}{os.path}
+\PYG{k+kn}{import} \PYG{n+nn}{scienceplots}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{style}\PYG{o}{.}\PYG{n}{use}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}science\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}notebook\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}grid\PYGZsq{}}\PYG{p}{])}
+
+
+
+\PYG{k}{def} \PYG{n+nf}{read\PYGZus{}pgm\PYGZus{}file}\PYG{p}{(}\PYG{n}{file\PYGZus{}name}\PYG{p}{):}
+
+    \PYG{n}{data\PYGZus{}dir} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{dirname}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{abspath}\PYG{p}{(}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}file\PYGZus{}\PYGZus{}}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Test if file exists}
+    \PYG{n}{file\PYGZus{}path} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{data\PYGZus{}dir}\PYG{p}{,} \PYG{n}{file\PYGZus{}name}\PYG{p}{)}
+    \PYG{k}{assert} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isfile}\PYG{p}{(}\PYG{n}{file\PYGZus{}path}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}file }\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{ does not exist\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{file\PYGZus{}path}\PYG{p}{)}
+
+    \PYG{n}{img} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imread}\PYG{p}{(}\PYG{n}{file\PYGZus{}name}\PYG{p}{,}\PYG{n}{flags}\PYG{o}{=}\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{IMREAD\PYGZus{}GRAYSCALE}\PYG{p}{)}
+
+    \PYG{k}{if} \PYG{n}{img} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}img.size: \PYGZsq{}}\PYG{p}{,} \PYG{n}{img}\PYG{o}{.}\PYG{n}{size}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}imread(}\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+s1}{) \PYGZhy{}\PYGZgt{} None\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{file\PYGZus{}path}\PYG{p}{))}
+
+    \PYG{k}{return} \PYG{n}{img}
+
+\PYG{k}{def} \PYG{n+nf}{show\PYGZus{}img\PYGZus{}hist}\PYG{p}{(}\PYG{n}{im}\PYG{p}{):}
+
+    \PYG{n}{vmin} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{amin}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+    \PYG{n}{vmax} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Intensity Min: }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{   Max:}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{vmin}\PYG{p}{,}\PYG{n}{vmax}\PYG{p}{))}
+
+    \PYG{n}{L} \PYG{o}{=} \PYG{n}{vmax} \PYG{o}{\PYGZhy{}} \PYG{n}{vmin}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Number of Levels: }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{L}\PYG{p}{))}
+
+    \PYG{n}{fig} \PYG{o}{=}\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{()}
+
+    \PYG{n}{imgplot} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{im}\PYG{p}{,}\PYG{n}{cmap}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}gray\PYGZsq{}}\PYG{p}{,} \PYG{n}{vmin}\PYG{o}{=}\PYG{n}{vmin}\PYG{p}{,} \PYG{n}{vmax}\PYG{o}{=}\PYG{n}{vmax}\PYG{p}{)}
+    \PYG{n}{fig}\PYG{o}{.}\PYG{n}{colorbar}\PYG{p}{(}\PYG{n}{imgplot}\PYG{p}{,} \PYG{n}{ax}\PYG{o}{=}\PYG{n}{plt}\PYG{o}{.}\PYG{n}{gca}\PYG{p}{())}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}
+    \PYG{n}{hist}\PYG{p}{,} \PYG{n}{bin\PYGZus{}edges} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{histogram}\PYG{p}{(}\PYG{n}{im}\PYG{o}{.}\PYG{n}{ravel}\PYG{p}{(),}\PYG{n}{bins}\PYG{o}{=}\PYG{n}{L}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{bar}\PYG{p}{(}\PYG{n}{bin\PYGZus{}edges}\PYG{p}{[:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{hist}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Implementa un contrast stretching}
+\PYG{k}{def} \PYG{n+nf}{process\PYGZus{}pgm\PYGZus{}file}\PYG{p}{(}\PYG{n}{im}\PYG{p}{):}
+    \PYG{n}{imout} \PYG{o}{=} \PYG{n}{im}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+
+    \PYG{c+c1}{\PYGZsh{} Busco los valores maximos y minimos de la imagen}
+    \PYG{n}{i\PYGZus{}min} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{amin}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+    \PYG{n}{i\PYGZus{}max} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{amax}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}Aplico la transformacion del contraste T(A) = a * A + b, donde ajusto una funcion lineal para que el valor minimo sea 0 y el maximo 255}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{im}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]):}
+        \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{im}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]):}
+            \PYG{n}{imout}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{im}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{i\PYGZus{}min}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{255} \PYG{o}{/} \PYG{p}{(}\PYG{n}{i\PYGZus{}max} \PYG{o}{\PYGZhy{}} \PYG{n}{i\PYGZus{}min}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{imout}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZdq{}}\PYG{p}{:}
+
+    \PYG{k}{if}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}\PYG{p}{)}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{3}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Usage: python read\PYGZhy{}write\PYGZhy{}pgm.py [infile.pgm] [outfile.pgm]\PYGZdq{}}\PYG{p}{)}
+        \PYG{n}{exit}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+    \PYG{n}{infile} \PYG{o}{=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+    \PYG{n}{outfile} \PYG{o}{=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}
+
+    \PYG{n}{img} \PYG{o}{=} \PYG{n}{read\PYGZus{}pgm\PYGZus{}file}\PYG{p}{(}\PYG{n}{infile}\PYG{p}{)}
+
+    \PYG{n}{im} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{img}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Size of image: }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{im}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{))}
+
+    \PYG{n}{show\PYGZus{}img\PYGZus{}hist}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+
+    \PYG{n}{imout} \PYG{o}{=} \PYG{n}{process\PYGZus{}pgm\PYGZus{}file}\PYG{p}{(}\PYG{n}{im}\PYG{p}{)}
+
+    \PYG{n}{show\PYGZus{}img\PYGZus{}hist}\PYG{p}{(}\PYG{n}{imout}\PYG{p}{)}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+    \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imwrite}\PYG{p}{(}\PYG{n}{outfile}\PYG{p}{,}\PYG{n}{imout}\PYG{p}{,[}\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{IMWRITE\PYGZus{}PXM\PYGZus{}BINARY}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{])}
+
+\end{Verbatim}

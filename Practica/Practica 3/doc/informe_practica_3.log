@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  10 MAR 2024 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.26)  10 MAR 2024 17:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1352,25 +1352,22 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package hyperref Warning: Suppressing link with empty target on input line 102.
-
-<images/ej_1/fantoma.png, id=20, 595.7457pt x 523.4757pt>
+<images/ej_1/fantoma.png, id=21, 595.7457pt x 523.4757pt>
 File: images/ej_1/fantoma.png Graphic file (type png)
 <use images/ej_1/fantoma.png>
 Package pdftex.def Info: images/ej_1/fantoma.png  used on input line 117.
 (pdftex.def)             Requested size: 102.02115pt x 89.64467pt.
-<images/ej_1/fantoma_eq.png, id=22, 634.7715pt x 531.4254pt>
+<images/ej_1/fantoma_eq.png, id=23, 634.7715pt x 531.4254pt>
 File: images/ej_1/fantoma_eq.png Graphic file (type png)
 <use images/ej_1/fantoma_eq.png>
 Package pdftex.def Info: images/ej_1/fantoma_eq.png  used on input line 119.
 (pdftex.def)             Requested size: 110.8946pt x 92.83865pt.
-[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
  <./images/ej_1/fantoma.png> <./images/ej_1/fantoma_eq.png>]
-<images/ej_2/sinogram.png, id=47, 483.0045pt x 388.0899pt>
+<images/ej_2/sinogram.png, id=48, 483.0045pt x 388.0899pt>
 File: images/ej_2/sinogram.png Graphic file (type png)
 <use images/ej_2/sinogram.png>
 Package pdftex.def Info: images/ej_2/sinogram.png  used on input line 131.
@@ -1380,17 +1377,17 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
-<images/ej_3/fourier_filters.png, id=50, 504.4446pt x 381.5856pt>
+<images/ej_3/fourier_filters.png, id=51, 504.4446pt x 381.5856pt>
 File: images/ej_3/fourier_filters.png Graphic file (type png)
 <use images/ej_3/fourier_filters.png>
 Package pdftex.def Info: images/ej_3/fourier_filters.png  used on input line 142.
 (pdftex.def)             Requested size: 199.60895pt x 150.98958pt.
-<images/ej_3/reconstruction_fbp.png, id=54, 409.0482pt x 341.1144pt>
+<images/ej_3/reconstruction_fbp.png, id=55, 409.0482pt x 341.1144pt>
 File: images/ej_3/reconstruction_fbp.png Graphic file (type png)
 <use images/ej_3/reconstruction_fbp.png>
 Package pdftex.def Info: images/ej_3/reconstruction_fbp.png  used on input line 168.
 (pdftex.def)             Requested size: 106.46126pt x 88.77612pt.
-<images/ej_3/reconstruction_error.png, id=55, 432.8973pt x 349.7868pt>
+<images/ej_3/reconstruction_error.png, id=56, 432.8973pt x 349.7868pt>
 File: images/ej_3/reconstruction_error.png Graphic file (type png)
 <use images/ej_3/reconstruction_error.png>
 Package pdftex.def Info: images/ej_3/reconstruction_error.png  used on input line 170.
@@ -1403,7 +1400,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [2 <./images/ej_2/sinogram.png> <./images/ej_3/fourier_filters.png> <./images/ej_3/reconstruction_fbp.png> <./images/ej_3/reconstruction_error.png>]
-<./images/ej_4/scale_error_2.png, id=73, 524.1984pt x 379.4175pt>
+<./images/ej_4/scale_error_2.png, id=74, 524.1984pt x 379.4175pt>
 File: ./images/ej_4/scale_error_2.png Graphic file (type png)
 <use ./images/ej_4/scale_error_2.png>
 Package pdftex.def Info: ./images/ej_4/scale_error_2.png  used on input line 182.
@@ -1413,7 +1410,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 182--183
  [][] 
  []
 
-<./images/ej_4/angle_error_2.png, id=77, 524.1984pt x 383.9946pt>
+<./images/ej_4/angle_error_2.png, id=78, 524.1984pt x 383.9946pt>
 File: ./images/ej_4/angle_error_2.png Graphic file (type png)
 <use ./images/ej_4/angle_error_2.png>
 Package pdftex.def Info: ./images/ej_4/angle_error_2.png  used on input line 194.
@@ -1426,7 +1423,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 194--195
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<images/ej_5/sinogram_noisy.png, id=83, 428.5611pt x 341.1144pt>
+<images/ej_5/sinogram_noisy.png, id=84, 428.5611pt x 341.1144pt>
 File: images/ej_5/sinogram_noisy.png Graphic file (type png)
 <use images/ej_5/sinogram_noisy.png>
 Package pdftex.def Info: images/ej_5/sinogram_noisy.png  used on input line 207.
@@ -1444,7 +1441,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [3 <./images/ej_5/sinogram_noisy.png> <./images/ej_4/scale_error_2.png> <./images/ej_4/angle_error_2.png>]
-<./images/ej_5/scale_error_noisy.png, id=102, 513.8397pt x 379.4175pt>
+<./images/ej_5/scale_error_noisy.png, id=103, 513.8397pt x 379.4175pt>
 File: ./images/ej_5/scale_error_noisy.png Graphic file (type png)
 <use ./images/ej_5/scale_error_noisy.png>
 Package pdftex.def Info: ./images/ej_5/scale_error_noisy.png  used on input line 216.
@@ -1454,7 +1451,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 216--217
  [][] 
  []
 
-<./images/ej_5/angle_error_noisy.png, id=104, 513.8397pt x 380.1402pt>
+<./images/ej_5/angle_error_noisy.png, id=105, 513.8397pt x 380.1402pt>
 File: ./images/ej_5/angle_error_noisy.png Graphic file (type png)
 <use ./images/ej_5/angle_error_noisy.png>
 Package pdftex.def Info: ./images/ej_5/angle_error_noisy.png  used on input line 223.
@@ -1464,27 +1461,27 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 223--224
  [][] 
  []
 
-<images/ej_5/reconstruction_original.png, id=109, 409.0482pt x 356.532pt>
+<images/ej_5/reconstruction_original.png, id=110, 409.0482pt x 356.532pt>
 File: images/ej_5/reconstruction_original.png Graphic file (type png)
 <use images/ej_5/reconstruction_original.png>
 Package pdftex.def Info: images/ej_5/reconstruction_original.png  used on input line 234.
 (pdftex.def)             Requested size: 106.46126pt x 92.7886pt.
-<images/ej_5/reconstruction_hann.png, id=110, 409.0482pt x 341.1144pt>
+<images/ej_5/reconstruction_hann.png, id=111, 409.0482pt x 341.1144pt>
 File: images/ej_5/reconstruction_hann.png Graphic file (type png)
 <use images/ej_5/reconstruction_hann.png>
 Package pdftex.def Info: images/ej_5/reconstruction_hann.png  used on input line 236.
 (pdftex.def)             Requested size: 106.46126pt x 88.77612pt.
-<images/ej_5/reconstruction_ramp.png, id=111, 422.5386pt x 344.487pt>
+<images/ej_5/reconstruction_ramp.png, id=112, 422.5386pt x 344.487pt>
 File: images/ej_5/reconstruction_ramp.png Graphic file (type png)
 <use images/ej_5/reconstruction_ramp.png>
 Package pdftex.def Info: images/ej_5/reconstruction_ramp.png  used on input line 238.
 (pdftex.def)             Requested size: 106.46126pt x 86.79436pt.
-<images/ej_5/reconstruction_shepp_logan.png, id=112, 422.5386pt x 342.078pt>
+<images/ej_5/reconstruction_shepp_logan.png, id=113, 422.5386pt x 342.078pt>
 File: images/ej_5/reconstruction_shepp_logan.png Graphic file (type png)
 <use images/ej_5/reconstruction_shepp_logan.png>
 Package pdftex.def Info: images/ej_5/reconstruction_shepp_logan.png  used on input line 240.
 (pdftex.def)             Requested size: 106.46126pt x 86.1874pt.
-<./images/ej_6/circle.png, id=115, 341.1144pt x 341.1144pt>
+<./images/ej_6/circle.png, id=116, 341.1144pt x 341.1144pt>
 File: ./images/ej_6/circle.png Graphic file (type png)
 <use ./images/ej_6/circle.png>
 Package pdftex.def Info: ./images/ej_6/circle.png  used on input line 252.
@@ -1494,42 +1491,42 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
-<images/ej_6/circle_none_8.png, id=117, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_none_8.png, id=118, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_none_8.png Graphic file (type png)
 <use images/ej_6/circle_none_8.png>
 Package pdftex.def Info: images/ej_6/circle_none_8.png  used on input line 259.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_ramp_8.png, id=118, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_ramp_8.png, id=119, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_ramp_8.png Graphic file (type png)
 <use images/ej_6/circle_ramp_8.png>
 Package pdftex.def Info: images/ej_6/circle_ramp_8.png  used on input line 261.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_none_16.png, id=119, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_none_16.png, id=120, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_none_16.png Graphic file (type png)
 <use images/ej_6/circle_none_16.png>
 Package pdftex.def Info: images/ej_6/circle_none_16.png  used on input line 263.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_ramp_16.png, id=120, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_ramp_16.png, id=121, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_ramp_16.png Graphic file (type png)
 <use images/ej_6/circle_ramp_16.png>
 Package pdftex.def Info: images/ej_6/circle_ramp_16.png  used on input line 265.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_none_32.png, id=121, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_none_32.png, id=122, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_none_32.png Graphic file (type png)
 <use images/ej_6/circle_none_32.png>
 Package pdftex.def Info: images/ej_6/circle_none_32.png  used on input line 267.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_ramp_32.png, id=122, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_ramp_32.png, id=123, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_ramp_32.png Graphic file (type png)
 <use images/ej_6/circle_ramp_32.png>
 Package pdftex.def Info: images/ej_6/circle_ramp_32.png  used on input line 269.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_none_64.png, id=123, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_none_64.png, id=124, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_none_64.png Graphic file (type png)
 <use images/ej_6/circle_none_64.png>
 Package pdftex.def Info: images/ej_6/circle_none_64.png  used on input line 271.
 (pdftex.def)             Requested size: 106.46126pt x 106.45744pt.
-<images/ej_6/circle_ramp_64.png, id=124, 341.1144pt x 341.1144pt>
+<images/ej_6/circle_ramp_64.png, id=125, 341.1144pt x 341.1144pt>
 File: images/ej_6/circle_ramp_64.png Graphic file (type png)
 <use images/ej_6/circle_ramp_64.png>
 Package pdftex.def Info: images/ej_6/circle_ramp_64.png  used on input line 273.
@@ -1542,7 +1539,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.4521pt}.
 
 [4 <./images/ej_5/reconstruction_original.png> <./images/ej_5/reconstruction_hann.png> <./images/ej_5/reconstruction_ramp.png> <./images/ej_5/reconstruction_shepp_logan.png> <./images/ej_5/scale_error_noisy.png> <./images/ej_5/angle_error_noisy.png>]
-<images/ej_7/sinogram_line.png, id=149, 438.9198pt x 350.5095pt>
+<images/ej_7/sinogram_line.png, id=150, 438.9198pt x 350.5095pt>
 File: images/ej_7/sinogram_line.png Graphic file (type png)
 <use images/ej_7/sinogram_line.png>
 Package pdftex.def Info: images/ej_7/sinogram_line.png  used on input line 287.
@@ -1552,7 +1549,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 287--288
  [][] 
  []
 
-<images/ej_7/reconstruction_line.png, id=151, 432.8973pt x 341.1144pt>
+<images/ej_7/reconstruction_line.png, id=152, 432.8973pt x 341.1144pt>
 File: images/ej_7/reconstruction_line.png Graphic file (type png)
 <use images/ej_7/reconstruction_line.png>
 Package pdftex.def Info: images/ej_7/reconstruction_line.png  used on input line 296.
@@ -1586,6 +1583,10 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `informe_practica_3.out' has not changed.
 (rerunfilecheck)             Checksum: 94786D5FD8DC2EF8C3B87A25CCA4C076;302.
 Package logreq Info: Writing requests to 'informe_practica_3.run.xml'.
@@ -1599,12 +1600,12 @@ Here is how much of TeX's memory you used:
  47882 multiletter control sequences out of 15000+600000
  569599 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,12n,93p,878b,1840s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,93p,878b,1842s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on informe_practica_3.pdf (6 pages, 2729632 bytes).
+Output written on informe_practica_3.pdf (6 pages, 2729891 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  48 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

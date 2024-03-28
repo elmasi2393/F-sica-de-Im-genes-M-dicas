@@ -61,9 +61,9 @@ ax2.set_title("Reconstruction error\nFiltered back projection")
 ax2.imshow(reconstruction_fbp - image, cmap=plt.cm.Greys_r, **imkwargs)
 plt.show()
 
-#from skimage.transform import iradon_sart
+from skimage.transform import iradon_sart
 #
-#reconstruction_sart = iradon_sart(sinogram, theta=theta)
+reconstruction_sart = iradon_sart(sinogram, theta=theta)
 #error = reconstruction_sart - image
 #print(f'SART (1 iteration) rms reconstruction error: '
 #      f'{np.sqrt(np.mean(error**2)):.3g}')

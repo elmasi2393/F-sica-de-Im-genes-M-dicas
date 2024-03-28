@@ -14,9 +14,11 @@ from skimage.metrics import peak_signal_noise_ratio as psnr
 from skimage.metrics import structural_similarity as ssim
 from skimage.transform import radon, iradon
 
-def ART(A, AT, b, x, mu=1e0, niter=1e2, bpos=True, plot=False):
+def ART(A, AT, b, x, mu=1e0, niter=1e2, bpos=True, plot=False, n_plots=0, save=False, path=''):
 
-    ATA = AT(A(np.ones_like(x)))  # Imagen a partir del sinograma de una imagen de unos  
+    ATA = AT(A(np.ones_like(x)))  # Imagen a partir del sinograma de una imagen de unos 
+    index_plots = np.linspace(0, niter-1, n_plots, dtype=np.int64)
+    # print(index_plots)
 
     for i in range(int(niter)):
 
@@ -26,11 +28,20 @@ def ART(A, AT, b, x, mu=1e0, niter=1e2, bpos=True, plot=False):
             x[x < 0] = 0
 
         if plot:
-            plt.imshow(x, cmap='gray')
-            plt.title("%d / %d" % (i + 1, niter))
-            plt.pause(1)
-            plt.close()
-
+            if n_plots != 0: 
+                if i in index_plots:
+                    print("Iteracion: ", i+1)
+                    plt.imshow(x, cmap='gray')
+                    plt.grid()
+                    plt.axis('off')
+                    # plt.title("%d / %d" % (i + 1, niter))
+                    if save:
+                        plt.savefig(path + 'iter_' + str(i) + '.png')
+                    plt.show()
+            else:
+                plt.imshow(x, cmap='gray')
+                plt.title("%d / %d" % (i + 1, niter))
+                plt.show()
     return x
 
 def get_errors(x, n_angles, N_detectors, noise,  niter=5, mu=1e0, bpos=True, plot=False):

@@ -50,6 +50,7 @@ fprintf(1,'\n\n');
 fprintf(1,'Perform k = %2.0f iterations with Kaczmarz''s method.',k);
 fprintf(1,'\nThis takes a moment ...');
 
+
 % Perform the kaczmarz iterations.
 Xkacz = kaczmarz(A,b,k);
 
